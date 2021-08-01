@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!-- color primary -->
+    <color name="colorPrimary50">#154A74</color>
+    <color name="colorPrimary40">#1A5A8C</color>
+    <color name="colorPrimary30">#1E6AA5</color>
+    <color name="colorPrimary20">#4080B3</color>
+    <color name="colorPrimary10">#6297C0</color>
+
+    <!-- color secondary -->
+    <color name="colorSecondary50">#3B618A</color>
+    <color name="colorSecondary40">#4775A7</color>
+    <color name="colorSecondary30">#548AC5</color>
+    <color name="colorSecondary20">#6E9CCE</color>
+    <color name="colorSecondary10">#87ADD6</color>
+
+    <!-- color secondary red -->
+    <color name="colorRed50">#BB0000</color>
+    <color name="colorRed40">#DC1013</color>
+    <color name="colorRed30">#EE2B2E</color>
+    <color name="colorRed20">#FD474A</color>
+    <color name="colorRed10">#FFEDEE</color>
+
+    <!-- color neutral -->
+    <color name="colorBlack70">#151823</color>
+    <color name="colorBlack60">#434755</color>
+    <color name="colorBlack50">#70727D</color>
+    <color name="colorBlack40">#9C9DA6</color>
+    <color name="colorBlack30">#DCDEE3</color>
+    <color name="colorBlack20">#EFF3F6</color>
+    <color name="colorBlack10">#F8FBFC</color>
+    <color name="colorFFF">#FFFFFF</color>
+
+    <!-- color support -->
+    <color name="colorSupportAlert">#EE2B2E</color>
+    <color name="colorSupportWarning">#FF7D1D</color>
+    <color name="colorSupportSuccess">#8FC742</color>
+    <color name="colorSupportOther">#FAAD24</color>
+    <color name="colorSupportGreen">#73BB11</color>
+    <color name="colorSupportBlue">#0084FF</color>
+
+    <color name="colorOpacity">#CC151823</color>
+    <color name="colorOpacityLight">#99000000</color>
+    <color name="colorNotification">#D8D8D8</color>
+    <color name="colorSegmentOpacity">#B2151823</color>
+    <color name="colorPrimaryOpacity">#E61171D4</color>
+
+    <color name="colorShimmer">#EDEFF4</color>
+    <color name="colorToast">#434755</color>
+
+    <color name="colorDarkThemePrimary">#14171D</color>
+    <color name="colorDarkThemeSecondary">#22222C</color>
+</resources>
