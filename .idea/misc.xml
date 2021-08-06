@@ -3,13 +3,46 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/drawable/bg_progress_message.xml" value="0.3880208333333333" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/drawable/bg_title_shade.xml" value="0.3880208333333333" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/drawable/ic_attention.xml" value="0.3880208333333333" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/drawable/ic_return_empty_list.xml" value="0.3880208333333333" />
         <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/drawable/ic_setting.xml" value="0.1" />
         <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/activity_main.xml" value="0.20885416666666667" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/adapter_game_item.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/fragment_detail_game.xml" value="0.20885416666666667" />
         <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/fragment_favorite.xml" value="0.371875" />
-        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/fragment_home.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/fragment_home.xml" value="0.29444444444444445" />
         <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/fragment_search.xml" value="0.371875" />
         <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/fragment_setting.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/view_empty_state.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/view_error_screen.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/view_error_state.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/view_loading_state.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/view_screen_error.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/view_state_empty.xml" value="0.16018518518518518" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/view_state_error.xml" value="0.29444444444444445" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/layout/view_state_loading.xml" value="0.37135416666666665" />
         <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/gamedb/app/src/main/res/menu/menu_bottom.xml" value="0.1" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/drawable/ic_favorite.xml" value="0.8975903614457831" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/drawable/ic_search.xml" value="0.54" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/drawable/ic_view_grid.xml" value="0.54" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/drawable/ic_view_list.xml" value="0.54" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/drawable/ic_view_type.xml" value="0.8975903614457831" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/drawable/ic_wishlist.xml" value="0.93125" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/activity_main.xml" value="0.50125" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/adapter_game_item.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/adapter_movie_grid_item.xml" value="0.50125" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/adapter_movie_item.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/content_detail_tourism.xml" value="0.7416666666666667" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/fragment_detail_game.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/fragment_detail_movie.xml" value="0.5989974937343359" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/fragment_favorite.xml" value="0.40186915887850466" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/fragment_home.xml" value="0.371875" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/fragment_search.xml" value="0.50125" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/view_state_empty.xml" value="0.50125" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/view_state_loading.xml" value="0.8925" />
+        <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/menu/menu_main.xml" value="0.8925" />
       </map>
     </option>
   </component>

@@ -50,6 +50,7 @@
     <color name="colorNotification">#D8D8D8</color>
     <color name="colorSegmentOpacity">#B2151823</color>
     <color name="colorPrimaryOpacity">#E61171D4</color>
+    <color name="colorOpacityFFF">#00FFFFFF</color>
 
     <color name="colorShimmer">#EDEFF4</color>
     <color name="colorToast">#434755</color>

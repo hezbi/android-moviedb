@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GameDB</string>
+    <string name="app_name">MovieDB</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="description_image_adapter">Latar Belakang</string>
+
+    <!-- detail -->
+    <string name="overview">Ringkasan</string>
+
+    <!-- progress bar -->
+    <string name="no_data">Tidak Ada Data</string>
+    <string name="please_wait">Mohon menunggu</string>
+
+    <!-- menu bottom -->
+    <string name="menu_bottom_home">Beranda</string>
+    <string name="menu_bottom_favorite">Favorit</string>
+    <string name="menu_bottom_setting">Pengaturan</string>
+
+    <!-- error -->
+    <string name="error_title">Terjadi Gangguan</string>
+    <string name="error_subtitle">Maaf sedang ada kendala pada sistem kami. Mohon coba lagi lain waktu.</string>
+
+    <!-- main menu -->
+    <string name="menu_main_search">Cari</string>
+    <string name="menu_main_list">List</string>
+    <string name="menu_main_grid">Grid</string>
 </resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text Base style -->
+    <style name="TextRegular">
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="TextMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <!-- Text D1 Style -->
+    <style name="TextRegular.Display1">
+        <item name="android:textSize">@dimen/text_size_28sp</item>
+    </style>
+
+    <style name="TextMedium.Display1">
+        <item name="android:textSize">@dimen/text_size_28sp</item>
+    </style>
+
+    <style name="TextBold.Display1">
+        <item name="android:textSize">@dimen/text_size_28sp</item>
+    </style>
+
+    <!-- Text D2 Style -->
+    <style name="TextRegular.Display2">
+        <item name="android:textSize">@dimen/text_size_24sp</item>
+    </style>
+
+    <style name="TextMedium.Display2">
+        <item name="android:textSize">@dimen/text_size_24sp</item>
+    </style>
+
+    <style name="TextBold.Display2">
+        <item name="android:textSize">@dimen/text_size_24sp</item>
+    </style>
+
+    <!-- Text H1 Style -->
+    <style name="TextRegular.Heading1">
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+    <style name="TextMedium.Heading1">
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+    <style name="TextBold.Heading1">
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+    <!-- Text H2 Style -->
+    <style name="TextRegular.Heading2">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <style name="TextMedium.Heading2">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <style name="TextBold.Heading2">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <!-- Text B1 Style -->
+    <style name="TextRegular.Body1">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="TextMedium.Body1">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <style name="TextBold.Body1">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <!-- Text B2 Style -->
+    <style name="TextRegular.Body2">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="TextMedium.Body2">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="TextBold.Body2">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <!-- Text B3 Style -->
+    <style name="TextRegular.Body3">
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+
+    <style name="TextMedium.Body3">
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+
+    <style name="TextBold.Body3">
+        <item name="android:textSize">@dimen/text_size_10sp</item>
+    </style>
+</resources>

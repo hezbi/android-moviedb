@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="menu_bottom_home">Beranda</string>
-    <string name="menu_bottom_favorite">Favorit</string>
-    <string name="menu_bottom_setting">Pengaturan</string>
-</resources>
