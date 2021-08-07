@@ -21,7 +21,9 @@
     <string name="error_subtitle">Maaf sedang ada kendala pada sistem kami. Mohon coba lagi lain waktu.</string>
 
     <!-- main menu -->
-    <string name="menu_main_search">Cari</string>
+    <string name="menu_main_search">Pencarian</string>
     <string name="menu_main_list">List</string>
     <string name="menu_main_grid">Grid</string>
+    <string name="language">Bahasa Indonesia</string>
+    <string name="dark_mode">Mode Gelap</string>
 </resources>

@@ -24,4 +24,6 @@
     <string name="menu_main_search">Search</string>
     <string name="menu_main_list">List</string>
     <string name="menu_main_grid">Grid</string>
+    <string name="language">Bahasa Indonesia</string>
+    <string name="dark_mode">Dark Mode</string>
 </resources>
