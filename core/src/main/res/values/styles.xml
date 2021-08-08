@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Text Base style -->
+
+    <style name="TextMedium">
+        <item name="fontFamily">@font/roboto_medium</item>
+    </style>
+
+    <style name="TextBold">
+        <item name="fontFamily">@font/roboto_bold</item>
+    </style>
+
+    <!-- Text D1 Style -->
+
+    <!-- Text D2 Style -->
+
+    <!-- Text H1 Style -->
+
+    <style name="TextBold.Heading1">
+        <item name="android:textSize">@dimen/text_size_18sp</item>
+    </style>
+
+    <!-- Text H2 Style -->
+
+    <style name="TextMedium.Heading2">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+    </style>
+
+    <!-- Text B1 Style -->
+
+    <style name="TextMedium.Body1">
+        <item name="android:textSize">@dimen/text_size_14sp</item>
+    </style>
+
+    <!-- Text B2 Style -->
+
+    <style name="TextMedium.Body2">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <style name="TextBold.Body2">
+        <item name="android:textSize">@dimen/text_size_12sp</item>
+    </style>
+
+    <!-- Text B3 Style -->
+
+</resources>

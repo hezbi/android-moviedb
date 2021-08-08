@@ -54,15 +54,15 @@ class HomeFragment : Fragment() {
         viewModel.movie().observe(viewLifecycleOwner, {
             if (it != null) {
                 when (it) {
-                    is Resource.Loading -> {
+                    is com.islamistudio.moviedb.core.data.Resource.Loading -> {
                         binding.progressBarView.root.visibility = View.VISIBLE
                         binding.swpRefresh.isRefreshing = false
                     }
-                    is Resource.Success -> {
+                    is com.islamistudio.moviedb.core.data.Resource.Success -> {
                         binding.progressBarView.root.visibility = View.GONE
                         showGridView(it.data!!)
                     }
-                    is Resource.Error -> {
+                    is com.islamistudio.moviedb.core.data.Resource.Error -> {
                         binding.progressBarView.root.visibility = View.GONE
                         binding.viewError.root.visibility = View.VISIBLE
                     }
