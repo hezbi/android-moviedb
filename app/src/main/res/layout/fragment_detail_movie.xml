@@ -24,13 +24,23 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:toolbarId="@+id/toolbar">
 
-            <ImageView
-                android:id="@+id/iv_detail_image"
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_360dp"
-                android:contentDescription="@string/description_image_adapter"
-                android:scaleType="centerCrop"
-                app:layout_collapseMode="parallax" />
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_360dp"
+                    android:scaleType="centerCrop"
+                    app:layout_collapseMode="parallax" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen_96dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_title_shade" />
+
+            </FrameLayout>
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -38,6 +48,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/Theme.TourismApp.PopupOverlay" />
+
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 
@@ -48,7 +59,6 @@
         layout="@layout/content_detail_tourism" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/dimen_16dp"
@@ -60,7 +70,6 @@
         app:srcCompat="@drawable/ic_favorite" />
 
     <include
-        android:id="@+id/progressBarView"
         layout="@layout/view_state_loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -72,7 +81,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
-        android:id="@+id/viewError"
         layout="@layout/view_state_error"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

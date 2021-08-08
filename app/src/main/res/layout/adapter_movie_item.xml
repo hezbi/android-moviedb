@@ -14,7 +14,6 @@
         android:background="@color/colorBlack20">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivPlaceHolder"
             android:layout_width="@dimen/dimen_64dp"
             android:layout_height="@dimen/dimen_64dp"
             android:contentDescription="@string/description_image_adapter"

@@ -1,5 +1,8 @@
 package com.islamistudio.moviedb.core.di
 
+import android.content.Context
+import android.content.SharedPreferences
+import androidx.preference.PreferenceManager
 import androidx.room.Room
 import com.islamistudio.moviedb.BuildConfig
 import com.islamistudio.moviedb.core.data.MovieRepository
@@ -19,12 +22,8 @@ import java.util.concurrent.TimeUnit
 
 val databaseModule = module {
     factory { get<MovieDatabase>().movieDao() }
-    single {
-        Room.databaseBuilder(
-            androidContext(),
-            MovieDatabase::class.java, "Movie.db"
-        ).fallbackToDestructiveMigration().build()
-    }
+    single { provideDatabase(androidContext()) }
+    single { provideSharedPreferences(androidContext()) }
 }
 
 val networkModule = module {
@@ -57,3 +56,12 @@ val repositoryModule = module {
         )
     }
 }
+
+private fun provideDatabase(context: Context): MovieDatabase =
+    Room.databaseBuilder(
+        context,
+        MovieDatabase::class.java, "Movie.db"
+    ).fallbackToDestructiveMigration().build()
+
+private fun provideSharedPreferences(context: Context): SharedPreferences =
+    PreferenceManager.getDefaultSharedPreferences(context)

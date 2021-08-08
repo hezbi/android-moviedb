@@ -2,6 +2,8 @@ package com.islamistudio.moviedb
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
 
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -19,6 +21,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.islamistudio.gamedb", appContext.packageName)
+        assertEquals("com.islamistudio.movidb", appContext.packageName)
     }
 }

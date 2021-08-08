@@ -25,7 +25,6 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvMovie"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:clipToPadding="false"
@@ -42,7 +41,6 @@
         tools:listitem="@layout/adapter_movie_item" />
 
     <include
-        android:id="@+id/viewEmpty"
         layout="@layout/view_state_empty"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"

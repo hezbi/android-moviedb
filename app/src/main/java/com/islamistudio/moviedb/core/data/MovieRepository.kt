@@ -9,7 +9,9 @@ import com.islamistudio.moviedb.core.domain.model.Movie
 import com.islamistudio.moviedb.core.domain.repository.IMovieRepository
 import com.islamistudio.moviedb.core.utils.AppExecutors
 import com.islamistudio.moviedb.core.utils.DataMapper
-import kotlinx.coroutines.flow.*
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.conflate
+import kotlinx.coroutines.flow.map
 
 class MovieRepository(
     private val remoteDataSource: RemoteDataSource,
@@ -25,7 +27,8 @@ class MovieRepository(
                 }
             }
 
-            override fun shouldFetch(data: List<Movie>?) = true
+            override fun shouldFetch(data: List<Movie>?) =
+                data == null || data.isEmpty()
 
             override suspend fun createCall(): Flow<ApiResponse<MovieListResponse>> =
                 remoteDataSource.getAllMovies()
@@ -55,11 +58,11 @@ class MovieRepository(
 
         }.asFlow()
 
-    override suspend fun searchMovie(query: String): List<Movie> {
-        val response = remoteDataSource.searchMovie(query).results
-        val movieList = DataMapper.mapMovieResponsesToEntities(response)
-        localDataSource.insertMovies(movieList)
-        return DataMapper.mapMovieResponsesToDomain(response)
+    override fun searchMovie(query: String): Flow<List<Movie>> {
+        return localDataSource.searchMovie(query).map {
+            DataMapper.mapMovieEntitiesToDomain(it)
+        }
+            .conflate()
     }
 
     override fun getFavoriteMovie(): Flow<List<Movie>> {

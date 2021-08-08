@@ -1,21 +1,15 @@
 package com.islamistudio.moviedb.setting
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.CompoundButton
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
 import com.islamistudio.moviedb.MainActivity
 import com.islamistudio.moviedb.R
-import com.islamistudio.moviedb.core.domain.model.Movie
-import com.islamistudio.moviedb.core.ui.RecyclerViewAdapterDelegate
-import com.islamistudio.moviedb.databinding.FragmentFavoriteBinding
+import com.islamistudio.moviedb.core.utils.PreferenceHelper
 import com.islamistudio.moviedb.databinding.FragmentSettingBinding
-import com.islamistudio.moviedb.favorite.FavoriteFragmentDirections
 
 class SettingFragment : Fragment() {
 
@@ -23,12 +17,10 @@ class SettingFragment : Fragment() {
     private val binding
         get() = _binding!!
 
-    private var isDarkMode = false
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSettingBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -42,13 +34,14 @@ class SettingFragment : Fragment() {
             (activity as MainActivity).supportActionBar?.title =
                 getString(R.string.menu_bottom_setting)
 
+            binding.swSettingTheme.isChecked = PreferenceHelper.getSetting(requireContext())
             binding.swSettingTheme.setOnCheckedChangeListener { buttonView, isChecked ->
-                isDarkMode = isChecked
+                PreferenceHelper.saveSetting(requireContext(), isChecked)
                 val delayTime = 200
                 run {
                     buttonView.postDelayed(
                         {
-                            if (isDarkMode) {
+                            if (PreferenceHelper.getSetting(requireContext())) {
                                 (activity as MainActivity).delegate.localNightMode =
                                     AppCompatDelegate.MODE_NIGHT_YES
                             } else {
@@ -68,3 +61,5 @@ class SettingFragment : Fragment() {
     }
 
 }
+
+

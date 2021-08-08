@@ -1,21 +1,15 @@
 package com.islamistudio.moviedb
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.islamistudio.moviedb.databinding.ActivityMainBinding
-import com.islamistudio.moviedb.favorite.FavoriteFragmentDirections
-import com.islamistudio.moviedb.home.HomeFragment
-import com.islamistudio.moviedb.home.HomeFragmentDirections
 
 class MainActivity : AppCompatActivity() {
 

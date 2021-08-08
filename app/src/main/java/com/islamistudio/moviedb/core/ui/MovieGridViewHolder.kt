@@ -6,7 +6,6 @@ import com.bumptech.glide.Glide
 import com.islamistudio.moviedb.BuildConfig
 import com.islamistudio.moviedb.core.domain.model.Movie
 import com.islamistudio.moviedb.databinding.AdapterMovieGridItemBinding
-import com.islamistudio.moviedb.databinding.AdapterMovieItemBinding
 
 class MovieGridViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 

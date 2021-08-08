@@ -4,26 +4,18 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
-import android.widget.SearchView
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.appcompat.widget.SearchView.OnQueryTextListener
-import androidx.core.widget.addTextChangedListener
-import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
 import com.islamistudio.moviedb.MainActivity
-import com.islamistudio.moviedb.R
-import com.islamistudio.moviedb.core.data.Resource
 import com.islamistudio.moviedb.core.domain.model.Movie
 import com.islamistudio.moviedb.core.ui.MovieAdapter
 import com.islamistudio.moviedb.core.ui.RecyclerViewAdapterDelegate
 import com.islamistudio.moviedb.databinding.FragmentSearchBinding
-import com.islamistudio.moviedb.home.HomeFragmentDirections
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.launch
@@ -44,7 +36,7 @@ class SearchFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -55,12 +47,8 @@ class SearchFragment : Fragment() {
         if (activity != null) {
 
             (activity as MainActivity).hideNavBar(true)
-            (activity as MainActivity).setSupportActionBar(binding.toolbar)
-            (activity as MainActivity).supportActionBar?.title =
-                getString(R.string.menu_main_search)
 
             binding.rvMovie.setHasFixedSize(true)
-
             binding.edtSearch.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(
                     s: CharSequence?,

@@ -4,15 +4,12 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.islamistudio.moviedb.MainActivity
 import com.islamistudio.moviedb.R
 import com.islamistudio.moviedb.core.data.Resource
 import com.islamistudio.moviedb.core.domain.model.Movie
-import com.islamistudio.moviedb.core.ui.MovieAdapter
 import com.islamistudio.moviedb.core.ui.MovieGridAdapter
 import com.islamistudio.moviedb.core.ui.RecyclerViewAdapterDelegate
 import com.islamistudio.moviedb.databinding.FragmentHomeBinding
@@ -29,7 +26,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         setHasOptionsMenu(true)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root

@@ -21,7 +21,7 @@ class SearchViewModel(private val movieUseCase: MovieUseCase) : ViewModel() {
         .filter {
             it.trim().isNotEmpty()
         }
-        .mapLatest {
+        .flatMapLatest {
             movieUseCase.searchMovie(it)
         }
         .asLiveData()
