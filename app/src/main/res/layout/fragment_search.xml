@@ -37,7 +37,9 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/dimen_8dp"
+            android:paddingTop="@dimen/dimen_8dp">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/appCompatImageView"
@@ -46,38 +48,28 @@
                 android:layout_margin="@dimen/dimen_8dp"
                 android:tint="@color/colorBlack40"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/ed_place"
+                app:layout_constraintEnd_toStartOf="@+id/edt_search"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="spread"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_search" />
 
-            <!--<EditText
+            <EditText
                 android:id="@+id/edt_search"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/dimen_8dp"
+                android:layout_marginBottom="@dimen/dimen_8dp"
                 android:background="@null"
                 android:layout_marginEnd="@dimen/dimen_8dp"
                 android:hint="@string/menu_main_search"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
-                app:layout_constraintTop_toTopOf="parent" />-->
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <AutoCompleteTextView
-                android:id="@+id/ed_place"
-                style="@style/Widget.MaterialComponents.AutoCompleteTextView.FilledBox"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_8dp"
-                android:hint="@string/menu_main_search"
-                app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
-                app:layout_constraintTop_toTopOf="@+id/appCompatImageView" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

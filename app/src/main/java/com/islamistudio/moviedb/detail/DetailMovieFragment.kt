@@ -42,14 +42,14 @@ class DetailMovieFragment : Fragment() {
             (activity as MainActivity).supportActionBar?.hide()
 
             val movie = args.movie
-            loadData(movie.id, false)
+            loadData(movie.id)
 
         }
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun loadData(id: Int, reload: Boolean) {
-        viewModel.getMovie(id, reload).observe(viewLifecycleOwner, {
+    private fun loadData(id: Int, ) {
+        viewModel.getMovie(id, ).observe(viewLifecycleOwner, {
             if (it != null) {
                 when (it) {
                     is Resource.Loading -> {
@@ -92,10 +92,5 @@ class DetailMovieFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-
-        if (activity != null) {
-            (activity as MainActivity).hideNavBar(false)
-            (activity as MainActivity).supportActionBar?.show()
-        }
     }
 }

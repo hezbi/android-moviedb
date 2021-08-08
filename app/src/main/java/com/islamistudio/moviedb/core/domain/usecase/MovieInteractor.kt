@@ -7,11 +7,11 @@ import kotlinx.coroutines.flow.Flow
 
 class MovieInteractor(private val movieRepository: IMovieRepository): MovieUseCase {
 
-    override fun getAllMovies(reload: Boolean) = movieRepository.getAllMovies(reload)
+    override fun getAllMovies() = movieRepository.getAllMovies()
 
-    override fun getMovie(id: Int, reload: Boolean) = movieRepository.getMovie(id, reload)
+    override fun getMovie(id: Int) = movieRepository.getMovie(id, )
 
-    override fun searchMovie(query: String) = movieRepository.searchMovie(query)
+    override suspend fun searchMovie(query: String) = movieRepository.searchMovie(query)
 
     override fun getFavoriteMovie() = movieRepository.getFavoriteMovie()
 

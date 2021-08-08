@@ -8,11 +8,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import android.widget.SearchView
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.core.widget.addTextChangedListener
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.islamistudio.moviedb.MainActivity
 import com.islamistudio.moviedb.R
@@ -59,7 +61,7 @@ class SearchFragment : Fragment() {
 
             binding.rvMovie.setHasFixedSize(true)
 
-            binding.edPlace.addTextChangedListener(object : TextWatcher {
+            binding.edtSearch.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(
                     s: CharSequence?,
                     start: Int,
@@ -81,19 +83,11 @@ class SearchFragment : Fragment() {
 
             viewModel.searchResult.observe(viewLifecycleOwner, {
                 if (it != null) {
-                    when (it) {
-                        is Resource.Loading -> {
-                            binding.progressBarView.root.visibility = View.VISIBLE
-                        }
-                        is Resource.Success -> {
-                            binding.progressBarView.root.visibility = View.GONE
-                            showList(it.data!!)
-                        }
-                        is Resource.Error -> {
-                            binding.progressBarView.root.visibility = View.GONE
-                            binding.viewError.root.visibility = View.VISIBLE
-                        }
+                    val movieList = arrayListOf<Movie>()
+                    it.map { movie ->
+                        movieList.add(movie)
                     }
+                    showList(movieList)
                 }
             })
 
@@ -110,7 +104,7 @@ class SearchFragment : Fragment() {
         movieAdapter.notifyDataSetChanged()
         movieAdapter.delegate = object : RecyclerViewAdapterDelegate<Movie> {
             override fun onClick(t: Movie) {
-                val action = HomeFragmentDirections.actionHomeFragmentToDetailMovieFragment(t)
+                val action = SearchFragmentDirections.actionSearchFragmentToDetailMovieFragment(t)
                 findNavController().navigate(action)
             }
 
@@ -120,10 +114,6 @@ class SearchFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-
-        if (activity != null) {
-            (activity as MainActivity).hideNavBar(false)
-        }
     }
 
 }

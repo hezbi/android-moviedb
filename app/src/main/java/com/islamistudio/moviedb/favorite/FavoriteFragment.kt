@@ -39,6 +39,7 @@ class FavoriteFragment : Fragment() {
 
         if (activity != null) {
 
+            (activity as MainActivity).hideNavBar(false)
             (activity as MainActivity).setSupportActionBar(binding.toolbar)
             (activity as MainActivity).supportActionBar?.title = getString(R.string.menu_bottom_favorite)
 

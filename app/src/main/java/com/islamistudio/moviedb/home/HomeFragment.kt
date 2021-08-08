@@ -40,20 +40,21 @@ class HomeFragment : Fragment() {
 
         if (activity != null) {
 
+            (activity as MainActivity).hideNavBar(false)
             (activity as MainActivity).setSupportActionBar(binding.toolbar)
             (activity as MainActivity).supportActionBar?.title = getString(R.string.app_name)
 
-            loadData(false)
+            loadData()
             binding.rvMovie.setHasFixedSize(true)
             binding.swpRefresh.setOnRefreshListener {
-                loadData(true)
+                loadData()
             }
         }
 
     }
 
-    private fun loadData(reload: Boolean) {
-        viewModel.movie(reload).observe(viewLifecycleOwner, {
+    private fun loadData() {
+        viewModel.movie().observe(viewLifecycleOwner, {
             if (it != null) {
                 when (it) {
                     is Resource.Loading -> {

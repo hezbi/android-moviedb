@@ -4,24 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="@dimen/dimen_8dp"
     android:elevation="@dimen/dimen_8dp"
+    app:cardCornerRadius="@dimen/dimen_8dp"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlack20">
 
-        <ImageView
-            android:id="@+id/ivMovieBanner"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_250dp"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPlaceHolder"
+            android:layout_width="@dimen/dimen_64dp"
+            android:layout_height="@dimen/dimen_64dp"
             android:contentDescription="@string/description_image_adapter"
-            android:scaleType="centerCrop"
+            android:tint="@color/colorBlack30"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@tools:sample/avatars" />
+            app:srcCompat="@drawable/ic_image_not_supported" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMovieBanner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -61,10 +72,10 @@
                 android:textColor="@color/colorFFF"
                 app:drawableStartCompat="@drawable/ic_star"
                 app:drawableTint="@color/colorSupportWarning"
-                app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                app:layout_constraintBottom_toBottomOf="@+id/tvMovieTitle"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintStart_toEndOf="@+id/tvMovieTitle"
                 app:layout_constraintTop_toTopOf="@+id/tvMovieTitle"
                 tools:text="4.8" />
 

@@ -10,13 +10,25 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorBlack20">
 
-        <ImageView
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivPlaceHolder"
+            android:layout_width="@dimen/dimen_32dp"
+            android:layout_height="@dimen/dimen_32dp"
+            android:contentDescription="@string/description_image_adapter"
+            android:tint="@color/colorBlack30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_image_not_supported" />
+
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/ivMovieBanner"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_250dp"
-            android:contentDescription="@string/description_image_adapter"
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

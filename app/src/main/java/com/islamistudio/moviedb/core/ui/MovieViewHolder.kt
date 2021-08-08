@@ -4,6 +4,7 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.islamistudio.moviedb.BuildConfig
+import com.islamistudio.moviedb.R
 import com.islamistudio.moviedb.core.domain.model.Movie
 import com.islamistudio.moviedb.databinding.AdapterMovieItemBinding
 

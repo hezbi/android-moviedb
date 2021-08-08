@@ -7,7 +7,7 @@ import com.islamistudio.moviedb.core.domain.usecase.MovieUseCase
 
 class DetailMovieViewModel(private val movieUseCase: MovieUseCase) : ViewModel() {
 
-    fun getMovie(id: Int, reload: Boolean) = movieUseCase.getMovie(id, reload).asLiveData()
+    fun getMovie(id: Int, ) = movieUseCase.getMovie(id, ).asLiveData()
 
     fun setFavoriteMovie(movie: Movie, newStatus:Boolean) =
         movieUseCase.setFavoriteMovie(movie, newStatus)

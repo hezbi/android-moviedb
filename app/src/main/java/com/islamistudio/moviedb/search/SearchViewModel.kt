@@ -22,7 +22,7 @@ class SearchViewModel(private val movieUseCase: MovieUseCase) : ViewModel() {
             it.trim().isNotEmpty()
         }
         .mapLatest {
-            movieUseCase.searchMovie(it).first()
+            movieUseCase.searchMovie(it)
         }
         .asLiveData()
 
