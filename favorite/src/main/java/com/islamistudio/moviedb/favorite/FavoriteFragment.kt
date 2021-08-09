@@ -14,7 +14,9 @@ import com.islamistudio.moviedb.core.domain.model.Movie
 import com.islamistudio.moviedb.core.ui.MovieAdapter
 import com.islamistudio.moviedb.core.ui.RecyclerViewAdapterDelegate
 import com.islamistudio.moviedb.databinding.FragmentFavoriteBinding
+import com.islamistudio.moviedb.di.favoriteModule
 import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.core.context.loadKoinModules
 
 class FavoriteFragment : Fragment() {
 
@@ -36,6 +38,8 @@ class FavoriteFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        loadKoinModules(favoriteModule)
 
         if (activity != null) {
 

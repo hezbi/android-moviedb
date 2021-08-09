@@ -20,4 +20,5 @@
     <!-- main menu -->
     <string name="menu_main_search">Search</string>
     <string name="dark_mode">Dark Mode</string>
+    <string name="title_favorite">Favorite</string>
 </resources>
