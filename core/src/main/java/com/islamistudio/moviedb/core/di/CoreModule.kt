@@ -2,6 +2,8 @@ package com.islamistudio.moviedb.core.di
 
 import androidx.room.Room
 import com.islamistudio.moviedb.core.BuildConfig
+import com.islamistudio.moviedb.core.data.MovieRepository
+import com.islamistudio.moviedb.core.data.source.local.LocalDataSource
 import com.islamistudio.moviedb.core.data.source.local.room.MovieDatabase
 import com.islamistudio.moviedb.core.data.source.remote.RemoteDataSource
 import com.islamistudio.moviedb.core.data.source.remote.network.ApiService
@@ -27,8 +29,10 @@ val databaseModule = module {
 
 val networkModule = module {
     single {
+        val loggingInterceptor =
+            HttpLoggingInterceptor().apply { if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE }
         OkHttpClient.Builder()
-            .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+            .addInterceptor(loggingInterceptor)
             .connectTimeout(120, TimeUnit.SECONDS)
             .readTimeout(120, TimeUnit.SECONDS)
             .build()
@@ -44,11 +48,11 @@ val networkModule = module {
 }
 
 val repositoryModule = module {
-    single { com.islamistudio.moviedb.core.data.source.local.LocalDataSource(get()) }
+    single { LocalDataSource(get()) }
     single { RemoteDataSource(get()) }
     factory { AppExecutors() }
     single<IMovieRepository> {
-        com.islamistudio.moviedb.core.data.MovieRepository(
+        MovieRepository(
             get(),
             get(),
             get()

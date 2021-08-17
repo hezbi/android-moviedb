@@ -15,12 +15,12 @@ import kotlinx.coroutines.flow.map
 
 class MovieRepository(
     private val remoteDataSource: RemoteDataSource,
-    private val localDataSource: com.islamistudio.moviedb.core.data.source.local.LocalDataSource,
+    private val localDataSource: LocalDataSource,
     private val appExecutors: AppExecutors
 ) : IMovieRepository {
 
-    override fun getAllMovies(): Flow<com.islamistudio.moviedb.core.data.Resource<List<Movie>>> =
-        object : com.islamistudio.moviedb.core.data.NetworkBoundResource<List<Movie>, MovieListResponse>() {
+    override fun getAllMovies(): Flow<Resource<List<Movie>>> =
+        object : NetworkBoundResource<List<Movie>, MovieListResponse>() {
             override fun loadFromDB(): Flow<List<Movie>> {
                 return localDataSource.getAllMovies().map {
                     DataMapper.mapMovieEntitiesToDomain(it)
@@ -40,8 +40,8 @@ class MovieRepository(
 
         }.asFlow()
 
-    override fun getMovie(id: Int): Flow<com.islamistudio.moviedb.core.data.Resource<Movie>> =
-        object : com.islamistudio.moviedb.core.data.NetworkBoundResource<Movie, MovieResponse>() {
+    override fun getMovie(id: Int): Flow<Resource<Movie>> =
+        object : NetworkBoundResource<Movie, MovieResponse>() {
             override fun loadFromDB(): Flow<Movie> {
                 return localDataSource.getMovie(id).map {
                     DataMapper.mapMovieEntityToDomain(it)

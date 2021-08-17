@@ -17,6 +17,7 @@ import com.islamistudio.moviedb.databinding.FragmentFavoriteBinding
 import com.islamistudio.moviedb.di.favoriteModule
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
+import org.koin.core.context.unloadKoinModules
 
 class FavoriteFragment : Fragment() {
 
@@ -62,7 +63,6 @@ class FavoriteFragment : Fragment() {
         }
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     private fun loadData() {
         viewModel.movie.observe(viewLifecycleOwner, {
             movieAdapter.list = it
@@ -73,6 +73,7 @@ class FavoriteFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        unloadKoinModules(favoriteModule)
         _binding = null
     }
 }
