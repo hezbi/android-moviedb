@@ -55,15 +55,15 @@ class HomeFragment : Fragment() {
             if (it != null) {
                 when (it) {
                     is Resource.Loading -> {
-                        binding.progressBarView.root.visibility = View.VISIBLE
+                        binding.viewLoading.root.visibility = View.VISIBLE
                         binding.swpRefresh.isRefreshing = false
                     }
                     is Resource.Success -> {
-                        binding.progressBarView.root.visibility = View.GONE
+                        binding.viewLoading.root.visibility = View.GONE
                         showGridView(it.data!!)
                     }
                     is Resource.Error -> {
-                        binding.progressBarView.root.visibility = View.GONE
+                        binding.viewLoading.root.visibility = View.GONE
                         binding.viewError.root.visibility = View.VISIBLE
                     }
                 }

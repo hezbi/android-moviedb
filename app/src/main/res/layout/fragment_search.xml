@@ -74,18 +74,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cv_search"
-        tools:listitem="@layout/adapter_movie_item" />
+        tools:listitem="@layout/item_adapter_movie_list" />
 
     <include
-        layout="@layout/view_state_loading"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <include
-        layout="@layout/view_state_error"
+        android:id="@+id/view_empty"
+        layout="@layout/view_state_empty"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

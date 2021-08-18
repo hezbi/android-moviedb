@@ -43,7 +43,20 @@
         <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/view_state_empty.xml" value="0.50125" />
         <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/layout/view_state_loading.xml" value="0.8925" />
         <entry key="..\:/Users/hezbi/Workspace/AndroidStudio/lab/dicoding/made/submission/mid/MovieDB/app/src/main/res/menu/menu_main.xml" value="0.8925" />
+        <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.28203125" />
         <entry key="app/src/main/res/layout/fragment_setting.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/view_state_empty.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/view_state_empty_grid.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/view_state_loading.xml" value="0.28203125" />
+        <entry key="app/src/main/res/layout/view_state_loading_grid.xml" value="0.28203125" />
+        <entry key="core/src/main/res/layout/adapter_movie_grid_item.xml" value="0.28203125" />
+        <entry key="core/src/main/res/layout/item_adapter_movie_grid.xml" value="0.28203125" />
+        <entry key="core/src/main/res/layout/item_adapter_movie_list.xml" value="0.28203125" />
+        <entry key="core/src/main/res/layout/item_adapter_placeholder_grid.xml" value="0.14375" />
+        <entry key="core/src/main/res/layout/item_adapter_placeholder_list.xml" value="0.14375" />
+        <entry key="core/src/main/res/layout/view_state_empty.xml" value="0.28203125" />
       </map>
     </option>
   </component>
@@ -52,5 +65,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.28203125" />
+      </ProjectState>
+    </option>
   </component>
 </project>

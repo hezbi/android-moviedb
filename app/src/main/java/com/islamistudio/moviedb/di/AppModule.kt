@@ -5,6 +5,7 @@ import com.islamistudio.moviedb.core.domain.usecase.MovieUseCase
 import com.islamistudio.moviedb.detail.DetailMovieViewModel
 import com.islamistudio.moviedb.home.HomeViewModel
 import com.islamistudio.moviedb.search.SearchViewModel
+import com.islamistudio.moviedb.setting.SettingFragment
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import org.koin.android.viewmodel.dsl.viewModel

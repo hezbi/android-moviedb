@@ -39,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
-        tools:listitem="@layout/adapter_movie_item" />
+        tools:listitem="@layout/item_adapter_movie_list" />
 
     <include
         android:id="@+id/view_empty"

@@ -1,6 +1,5 @@
 package com.islamistudio.moviedb.search
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -70,6 +69,7 @@ class SearchFragment : Fragment() {
             })
 
             viewModel.searchResult.observe(viewLifecycleOwner, {
+                binding.viewEmpty.root.visibility = if (it.isNotEmpty()) View.GONE else View.VISIBLE
                 if (it != null) {
                     val movieList = arrayListOf<Movie>()
                     it.map { movie ->
@@ -82,7 +82,6 @@ class SearchFragment : Fragment() {
         }
     }
 
-    @SuppressLint("NotifyDataSetChanged")
     private fun showList(list: List<Movie>) {
         binding.rvMovie.layoutManager = LinearLayoutManager(context)
         binding.rvMovie.setHasFixedSize(true)

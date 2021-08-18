@@ -4,12 +4,12 @@ import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.islamistudio.moviedb.core.BuildConfig
-import com.islamistudio.moviedb.core.databinding.AdapterMovieItemBinding
+import com.islamistudio.moviedb.core.databinding.ItemAdapterMovieListBinding
 import com.islamistudio.moviedb.core.domain.model.Movie
 
 class MovieViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    private val binding = AdapterMovieItemBinding.bind(itemView)
+    private val binding = ItemAdapterMovieListBinding.bind(itemView)
 
     fun setData(
         data: List<Movie>,

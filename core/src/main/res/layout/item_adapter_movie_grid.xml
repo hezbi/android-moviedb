@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="@dimen/dimen_8dp"
-    app:cardCornerRadius="@dimen/dimen_8dp"
+    app:cardCornerRadius="@dimen/dimen_4dp"
     app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -14,8 +14,8 @@
         android:background="@color/colorBlack20">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="@dimen/dimen_64dp"
-            android:layout_height="@dimen/dimen_64dp"
+            android:layout_width="@dimen/dimen_32dp"
+            android:layout_height="@dimen/dimen_32dp"
             android:contentDescription="@string/description_image_adapter"
             android:tint="@color/colorBlack30"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +31,8 @@
             android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -51,32 +52,15 @@
                 android:layout_marginTop="@dimen/dimen_8dp"
                 android:layout_marginEnd="@dimen/dimen_16dp"
                 android:layout_marginBottom="@dimen/dimen_8dp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
                 android:textColor="@color/colorFFF"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/tvRating"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="TextContrastCheck"
                 tools:text="@tools:sample/full_names" />
-
-            <TextView
-                android:id="@+id/tvRating"
-                style="@style/TextBold.Body2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/dimen_16dp"
-                android:drawablePadding="@dimen/dimen_8dp"
-                android:gravity="center_vertical"
-                android:textColor="@color/colorFFF"
-                app:drawableStartCompat="@drawable/ic_star"
-                app:drawableTint="@color/colorSupportWarning"
-                app:layout_constraintBottom_toBottomOf="@+id/tvMovieTitle"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/tvMovieTitle"
-                app:layout_constraintTop_toTopOf="@+id/tvMovieTitle"
-                tools:text="4.8" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
