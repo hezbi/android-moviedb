@@ -1,6 +1,5 @@
 package com.islamistudio.moviedb.favorite
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -25,16 +24,16 @@ class FavoriteFragment : Fragment() {
 
     private var _binding: FragmentFavoriteBinding? = null
     private val binding
-        get() = _binding!!
+        get() = _binding
 
     private val movieAdapter = MovieAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
-        return binding.root
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -45,7 +44,7 @@ class FavoriteFragment : Fragment() {
         if (activity != null) {
 
             (activity as MainActivity).hideNavBar(false)
-            (activity as MainActivity).setSupportActionBar(binding.toolbar)
+            (activity as MainActivity).setSupportActionBar(binding?.toolbar)
             (activity as MainActivity).supportActionBar?.title = getString(R.string.menu_bottom_favorite)
 
             movieAdapter.delegate = object : RecyclerViewAdapterDelegate<Movie> {
@@ -55,7 +54,7 @@ class FavoriteFragment : Fragment() {
                 }
             }
             loadData()
-            binding.rvMovie.apply {
+            binding?.rvMovie?.apply {
                 layoutManager = LinearLayoutManager(context)
                 setHasFixedSize(true)
                 adapter = movieAdapter
@@ -67,13 +66,15 @@ class FavoriteFragment : Fragment() {
         viewModel.movie.observe(viewLifecycleOwner, {
             movieAdapter.list = it
             movieAdapter.notifyDataSetChanged()
-            binding.viewEmpty.root.visibility = if (it.isNotEmpty()) View.GONE else View.VISIBLE
+            binding?.viewEmpty?.root?.visibility = if (it.isNotEmpty()) View.GONE else View.VISIBLE
         })
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         unloadKoinModules(favoriteModule)
+        binding?.appBarLayout?.removeAllViewsInLayout()
+        binding?.rvMovie?.adapter = null
         _binding = null
     }
 }

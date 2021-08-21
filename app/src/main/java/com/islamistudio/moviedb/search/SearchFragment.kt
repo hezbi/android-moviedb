@@ -28,16 +28,16 @@ class SearchFragment : Fragment() {
 
     private var _binding: FragmentSearchBinding? = null
     private val binding
-        get() = _binding!!
+        get() = _binding
 
     private val movieAdapter = MovieAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         _binding = FragmentSearchBinding.inflate(inflater, container, false)
-        return binding.root
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -47,8 +47,8 @@ class SearchFragment : Fragment() {
 
             (activity as MainActivity).hideNavBar(true)
 
-            binding.rvMovie.setHasFixedSize(true)
-            binding.edtSearch.addTextChangedListener(object : TextWatcher {
+            binding?.rvMovie?.setHasFixedSize(true)
+            binding?.edtSearch?.addTextChangedListener(object : TextWatcher {
                 override fun beforeTextChanged(
                     s: CharSequence?,
                     start: Int,
@@ -69,7 +69,7 @@ class SearchFragment : Fragment() {
             })
 
             viewModel.searchResult.observe(viewLifecycleOwner, {
-                binding.viewEmpty.root.visibility = if (it.isNotEmpty()) View.GONE else View.VISIBLE
+                binding?.viewEmpty?.root?.visibility = if (it.isNotEmpty()) View.GONE else View.VISIBLE
                 if (it != null) {
                     val movieList = arrayListOf<Movie>()
                     it.map { movie ->
@@ -83,10 +83,10 @@ class SearchFragment : Fragment() {
     }
 
     private fun showList(list: List<Movie>) {
-        binding.rvMovie.layoutManager = LinearLayoutManager(context)
-        binding.rvMovie.setHasFixedSize(true)
+        binding?.rvMovie?.layoutManager = LinearLayoutManager(context)
+        binding?.rvMovie?.setHasFixedSize(true)
         movieAdapter.list = list
-        binding.rvMovie.adapter = movieAdapter
+        binding?.rvMovie?.adapter = movieAdapter
 
         movieAdapter.notifyDataSetChanged()
         movieAdapter.delegate = object : RecyclerViewAdapterDelegate<Movie> {
@@ -100,6 +100,7 @@ class SearchFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding?.rvMovie?.adapter = null
         _binding = null
     }
 

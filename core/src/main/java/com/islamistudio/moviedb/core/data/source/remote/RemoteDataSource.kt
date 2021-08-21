@@ -38,7 +38,4 @@ class RemoteDataSource(private val apiService: ApiService) {
         }.flowOn(Dispatchers.IO)
     }
 
-    suspend fun searchMovie(query: String) =
-        apiService.searchMovie(BuildConfig.API_KEY, query)
-
 }

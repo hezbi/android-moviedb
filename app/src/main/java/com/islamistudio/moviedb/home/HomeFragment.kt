@@ -21,15 +21,15 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding
-        get() = _binding!!
+        get() = _binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         setHasOptionsMenu(true)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        return binding.root
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -38,12 +38,12 @@ class HomeFragment : Fragment() {
         if (activity != null) {
 
             (activity as MainActivity).hideNavBar(false)
-            (activity as MainActivity).setSupportActionBar(binding.toolbar)
+            (activity as MainActivity).setSupportActionBar(binding?.toolbar)
             (activity as MainActivity).supportActionBar?.title = getString(R.string.app_name)
 
             loadData()
-            binding.rvMovie.setHasFixedSize(true)
-            binding.swpRefresh.setOnRefreshListener {
+            binding?.rvMovie?.setHasFixedSize(true)
+            binding?.swpRefresh?.setOnRefreshListener {
                 loadData()
             }
         }
@@ -55,16 +55,16 @@ class HomeFragment : Fragment() {
             if (it != null) {
                 when (it) {
                     is Resource.Loading -> {
-                        binding.viewLoading.root.visibility = View.VISIBLE
-                        binding.swpRefresh.isRefreshing = false
+                        binding?.viewLoading?.root?.visibility = View.VISIBLE
+                        binding?.swpRefresh?.isRefreshing = false
                     }
                     is Resource.Success -> {
-                        binding.viewLoading.root.visibility = View.GONE
+                        binding?.viewLoading?.root?.visibility = View.GONE
                         showGridView(it.data!!)
                     }
                     is Resource.Error -> {
-                        binding.viewLoading.root.visibility = View.GONE
-                        binding.viewError.root.visibility = View.VISIBLE
+                        binding?.viewLoading?.root?.visibility = View.GONE
+                        binding?.viewError?.root?.visibility = View.VISIBLE
                     }
                 }
             }
@@ -73,10 +73,10 @@ class HomeFragment : Fragment() {
 
     @SuppressLint("NotifyDataSetChanged")
     fun showGridView(list: List<Movie>) {
-        binding.rvMovie.layoutManager = GridLayoutManager(requireContext(), 2)
+        binding?.rvMovie?.layoutManager = GridLayoutManager(requireContext(), 2)
         val movieGridAdapter = MovieGridAdapter()
         movieGridAdapter.list = list
-        binding.rvMovie.adapter = movieGridAdapter
+        binding?.rvMovie?.adapter = movieGridAdapter
 
         movieGridAdapter.notifyDataSetChanged()
         movieGridAdapter.delegate = object : RecyclerViewAdapterDelegate<Movie> {
@@ -109,6 +109,8 @@ class HomeFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding?.appBarLayout?.removeAllViewsInLayout()
+        binding?.rvMovie?.adapter = null
         _binding = null
     }
 }

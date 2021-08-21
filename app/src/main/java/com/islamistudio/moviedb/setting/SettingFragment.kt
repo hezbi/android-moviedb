@@ -15,14 +15,14 @@ class SettingFragment : Fragment() {
 
     private var _binding: FragmentSettingBinding? = null
     private val binding
-        get() = _binding!!
+        get() = _binding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         _binding = FragmentSettingBinding.inflate(inflater, container, false)
-        return binding.root
+        return binding?.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -30,12 +30,12 @@ class SettingFragment : Fragment() {
 
         if (activity != null) {
 
-            (activity as MainActivity).setSupportActionBar(binding.toolbar)
+            (activity as MainActivity).setSupportActionBar(binding?.toolbar)
             (activity as MainActivity).supportActionBar?.title =
                 getString(R.string.menu_bottom_setting)
 
-            binding.swSettingTheme.isChecked = PreferenceHelper.getSetting(requireContext())
-            binding.swSettingTheme.setOnCheckedChangeListener { buttonView, isChecked ->
+            binding?.swSettingTheme?.isChecked = PreferenceHelper.getSetting(requireContext())
+            binding?.swSettingTheme?.setOnCheckedChangeListener { buttonView, isChecked ->
                 PreferenceHelper.saveSetting(requireContext(), isChecked)
                 val delayTime = 200
                 run {
@@ -57,6 +57,7 @@ class SettingFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+        binding?.appBarLayout?.removeAllViewsInLayout()
         _binding = null
     }
 
