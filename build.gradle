@@ -36,6 +36,10 @@ buildscript {
     ext.sqlcipher_version = "4.4.0"
     ext.sqlite_ktx_version = "2.1.0"
 
+    ext.leakcanary_version = "2.7"
+    ext.mockito_core_version = "3.3.1"
+    ext.mockito_inline_version = "3.2.4"
+
     repositories {
         google()
         mavenCentral()
