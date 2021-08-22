@@ -37,8 +37,6 @@ buildscript {
     ext.sqlite_ktx_version = "2.1.0"
 
     ext.leakcanary_version = "2.7"
-    ext.mockito_core_version = "3.3.1"
-    ext.mockito_inline_version = "3.2.4"
 
     repositories {
         google()
@@ -46,7 +44,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.0'
+        classpath 'com.android.tools.build:gradle:7.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 
