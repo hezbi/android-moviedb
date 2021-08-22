@@ -8,8 +8,6 @@ class LocalDataSource(private val movieDao: MovieDao) {
 
     fun getAllMovies(): Flow<List<MovieEntity>> = movieDao.getAllMovie()
 
-    fun getMovie(id: Int): Flow<MovieEntity> = movieDao.getMovie(id)
-
     fun searchMovie(query: String): Flow<List<MovieEntity>> = movieDao.searchMovie(query)
 
     fun getFavoriteMovie(): Flow<List<MovieEntity>> = movieDao.getFavoriteMovie()

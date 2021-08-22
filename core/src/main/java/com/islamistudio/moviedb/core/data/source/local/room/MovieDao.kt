@@ -10,9 +10,6 @@ interface MovieDao {
     @Query("SELECT * FROM movie")
     fun getAllMovie(): Flow<List<MovieEntity>>
 
-    @Query("SELECT * FROM movie where id = :id")
-    fun getMovie(id: Int): Flow<MovieEntity>
-
     @Query("SELECT * FROM movie where originalTitle like '%' || :query || '%'")
     fun searchMovie(query: String): Flow<List<MovieEntity>>
 

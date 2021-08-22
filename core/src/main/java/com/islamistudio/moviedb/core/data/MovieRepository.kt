@@ -40,24 +40,6 @@ class MovieRepository(
 
         }.asFlow()
 
-    override fun getMovie(id: Int): Flow<Resource<Movie>> =
-        object : NetworkBoundResource<Movie, MovieResponse>() {
-            override fun loadFromDB(): Flow<Movie> {
-                return localDataSource.getMovie(id).map {
-                    DataMapper.mapMovieEntityToDomain(it)
-                }
-            }
-
-            override fun shouldFetch(data: Movie?) = true
-
-            override suspend fun createCall(): Flow<ApiResponse<MovieResponse>> =
-                remoteDataSource.getMovie(id)
-
-            override suspend fun saveCallResult(data: MovieResponse) {
-            }
-
-        }.asFlow()
-
     override fun searchMovie(query: String): Flow<List<Movie>> {
         return localDataSource.searchMovie(query).map {
             DataMapper.mapMovieEntitiesToDomain(it)
