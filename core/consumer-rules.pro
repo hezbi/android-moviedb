@@ -1,5 +1,6 @@
 ##---------------Begin: proguard configuration for Global  ----------
 -keepnames class com.islamistudio.moviedb.core.domain.model.Movie
+-keep class * extends androidx.fragment.app.Fragment{}
 
 ##---------------Begin: proguard configuration for SQLCipher  ----------
 -keep,includedescriptorclasses class net.sqlcipher.** { *; }
